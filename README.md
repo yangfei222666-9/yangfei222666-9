@@ -94,11 +94,12 @@ Not fortune-telling. **Life engineering.**
 
 ## 📬 Contact
 
+- **Email (preferred)**: `yangfei222666@gmail.com`
+- WeChat (secondary): `yf529486`
 - GitHub issues on any repo
-- Telegram: [@TaijiOS_bot](https://t.me/TaijiOS_bot)
+- Telegram bot: [@TaijiOS_bot](https://t.me/TaijiOS_bot)
 - ClawHub: [Zhuge · AI Prediction Advisor](https://clawhub.ai/@yangfei222666-9/zhuge-skill)
 - Xiaping: [诸葛亮 · AI 推演军师](https://xiaping.coze.site/)
-- Email: yangfei222666@gmail.com
 
 ---
 
