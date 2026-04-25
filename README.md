@@ -53,7 +53,7 @@ This profile is the portfolio entrance. Start here, then follow the repo that ma
 | Project | What | Language |
 |---|---|---|
 | **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — TaijiOS live HUD, five-engine architecture, and Chinese-facing landing | Python |
-| **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — trace failures, apply guarded changes, and rollback on regression | Python |
+| **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
 | **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Legacy prototype — archive candidate; current main development is `taiji` | Python |
 | **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Lite prototype / example pack — archive candidate; reusable ideas move into `taiji` | Python |
 | **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | 诸葛亮 · AI Prediction Advisor — 64-hexagram reasoning for football prediction (demo of TaijiOS decision engine) | Python |
