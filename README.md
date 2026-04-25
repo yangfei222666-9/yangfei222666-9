@@ -1,4 +1,4 @@
-<h1 align="center">丞相 · Yang Fei</h1>
+<h1 align="center">TaijiOS · 诸葛亮</h1>
 
 <p align="center">
   Independent developer building <strong>TaijiOS</strong> — a self-learning AI operating system inspired by the <em>I Ching</em>'s 64-hexagram framework.
@@ -108,7 +108,7 @@ Not fortune-telling. **Life engineering.**
 
 **If you're an investor** — I don't have growth curves yet. What I can verify is execution density, technical originality, and cognitive clarity. If you believe "solo + AI collaboration" is a future engineering unit and are open to betting on signal over metrics at Pre-seed, let's talk.
 
-**If you're a potential co-founder** — clone [TaijiOS](https://github.com/yangfei222666-9/TaijiOS), run `python examples/quickstart_minimal.py`. If something resonates, email me. No polished CV needed.
+**If you're a potential co-founder** — clone [taiji](https://github.com/yangfei222666-9/taiji), run the live HUD path, and open a GitHub issue if something resonates. No polished CV needed.
 
 **If you're a potential user** — describe your business pain point. We'll evaluate whether a custom skill on top of TaijiOS could be your industry's first landing case.
 
@@ -116,9 +116,7 @@ Not fortune-telling. **Life engineering.**
 
 ## 📬 Contact
 
-- **Email (preferred)**: `yangfei222666@gmail.com`
-- WeChat (secondary): `yf529486`
-- GitHub issues on any repo
+- **GitHub issues preferred** — open an issue on the repo closest to your topic
 - Telegram bot: [@TaijiOS_bot](https://t.me/TaijiOS_bot)
 - ClawHub: [Zhuge · AI Prediction Advisor](https://clawhub.ai/@yangfei222666-9/zhuge-skill)
 - Xiaping: [诸葛亮 · AI 推演军师](https://xiaping.coze.site/)
