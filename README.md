@@ -45,17 +45,27 @@ This is not a funding story yet. It is an execution-density snapshot. Check each
 
 ---
 
+## 🚀 Current Release / 当前入口
+
+Start with **[self-improving-loop v0.1.1](https://github.com/yangfei222666-9/self-improving-loop/releases/tag/v0.1.1)**.
+
+It is the smallest reusable slice of TaijiOS: a hexagram-guided reliability layer for AI agents that records execution traces, maps runtime signals into six engineering lines, applies guarded policy patches, and rolls back on regression.
+
+中文：如果你只想看一个能直接安装、能验证、能复用的入口，先看 `self-improving-loop v0.1.1`。它不是完整 TaijiOS，而是从 TaijiOS 拆出来的 AI Agent 可靠性与回滚层。
+
+---
+
 ## 🌀 Core Projects
 
 This profile is the portfolio entrance. Start here, then follow the repo that matches your use case:
 
 | Project | What | Language |
 |---|---|---|
-| **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — hexagram-guided reliability/runtime system, live HUD, five-engine architecture | Python |
 | **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
+| **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — hexagram-guided reliability/runtime system, live HUD, five-engine architecture | Python |
 | **[taijios-bundle](https://github.com/yangfei222666-9/taijios-bundle)** | Installer / release snapshot / local trial bundle | Python |
-| **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Legacy prototype — archive candidate; current main development is `taiji` | Python |
-| **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Lite prototype / example pack — archive candidate; reusable ideas move into `taiji` | Python |
+| **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Archived legacy prototype; current main development is `taiji` | Python |
+| **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Archived lite prototype / example pack; reusable ideas move into `taiji` | Python |
 | **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | 诸葛亮 · AI Prediction Advisor — 64-hexagram reasoning for football prediction (demo of TaijiOS decision engine) | Python |
 
 ---
