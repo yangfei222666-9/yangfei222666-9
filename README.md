@@ -10,6 +10,12 @@
   <a href="https://taijios-cyberpet.netlify.app"><img src="https://img.shields.io/badge/CyberPet-Live%20Demo-ff3860" alt="CyberPet demo"/></a>
 </p>
 
+<p align="center">
+  <a href="https://taijios-hud.netlify.app">
+    <img src="./assets/taijios-proof-card.svg" alt="TaijiOS execution proof card: 60 days, 14 modules, 346 heartbeats, 12/12 LLM gateway tests, 70,748 lines of code, 2 live demos" width="100%" />
+  </a>
+</p>
+
 ---
 
 ## 👋 关于我 / About
@@ -34,19 +40,35 @@
            ✅ release repo · 48 commits · 70,748 LoC (8-day consolidation)
 ```
 
-Not paid. Not funded. Not a team. Just curiosity + Claude + time.
+**$0 budget · 0 team · 60 days · 70,748 LoC · 14 modules · 1 phase transition observed.**
+
+This is not a funding story yet. It is an execution-density signal.
 
 ---
 
 ## 🌀 Core Projects
 
+This profile is the portfolio entrance. Start here, then follow the repo that matches your use case:
+
 | Project | What | Language |
 |---|---|---|
-| **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | AI Operating System — 5 engines mapped to *I Ching* hexagrams, each bound by its trigram's semantics | Python |
-| **[taiji](https://github.com/yangfei222666-9/taiji)** | TaijiOS 中文主页 / Chinese-facing landing | Python |
-| **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Minimal cognitive AI + **ICI** (Individual Cognitive Identity) — load your soul file, AI becomes you | Python |
+| **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — TaijiOS live HUD, five-engine architecture, and Chinese-facing landing | Python |
+| **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Legacy prototype — kept for history; current main development is `taiji` | Python |
+| **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Lite prototype / example pack — minimal cognitive AI + **ICI** (Individual Cognitive Identity) | Python |
 | **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | 诸葛亮 · AI Prediction Advisor — 64-hexagram reasoning for football prediction (demo of TaijiOS decision engine) | Python |
-| **[zhuge-crystals](https://github.com/yangfei222666-9/zhuge-crystals)** | Public, sanitized decision-crystal pool for zhuge-skill · PR-audited, anonymous | JSONL |
+
+---
+
+## 🧊 Shared Crystal Pool
+
+**[zhuge-crystals](https://github.com/yangfei222666-9/zhuge-crystals)** is the public collaboration surface behind `zhuge-skill`: a sanitized, PR-reviewed decision-crystal pool.
+
+Current verified state:
+
+- Public pool file: `crystals.jsonl`
+- Privacy rule: whitelist schema only; no user IDs, team names, timestamps, raw odds, API keys, or free-text notes
+- Contribution model: local users sanitize crystals, then submit a PR for maintainer review
+- Public entries today: `0` — the infrastructure exists; the next traction target is the first valid sanitized PR
 
 ---
 
