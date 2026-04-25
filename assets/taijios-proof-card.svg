@@ -1,6 +1,6 @@
 <svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">TaijiOS execution proof card</title>
-  <desc id="desc">A proof card summarizing TaijiOS execution density: 60 days, 14 modules, 346 heartbeats, 12 out of 12 LLM gateway tests, 70,748 lines of code, and 2 live demos.</desc>
+  <desc id="desc">A proof card summarizing the first TaijiOS 60-day execution snapshot: 14 modules, 346 heartbeats, 12 out of 12 LLM gateway tests, 70,748 lines of code, and 2 live demos.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
       <stop stop-color="#07111F"/>
@@ -23,11 +23,11 @@
     <rect x="70" y="66" width="1060" height="288" rx="28" fill="#0B1624" fill-opacity="0.82" stroke="#24435C"/>
   </g>
   <text x="110" y="128" fill="#E9F2FF" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="42" font-weight="800">TaijiOS</text>
-  <text x="110" y="171" fill="#8FB2C9" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="500">60-day solo + multi-AI operating-system build</text>
+  <text x="110" y="171" fill="#8FB2C9" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="500">First 60-day solo + multi-AI reliability-runtime snapshot</text>
   <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
     <g transform="translate(110 220)">
       <text y="0" fill="#00D1B2" font-size="36" font-weight="800">60</text>
-      <text y="34" fill="#BFD5E6" font-size="17">days</text>
+      <text y="34" fill="#BFD5E6" font-size="17">day snapshot</text>
     </g>
     <g transform="translate(280 220)">
       <text y="0" fill="#58A6FF" font-size="36" font-weight="800">14</text>

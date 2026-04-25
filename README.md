@@ -1,7 +1,7 @@
 <h1 align="center">TaijiOS · 诸葛亮</h1>
 
 <p align="center">
-  Independent developer building <strong>TaijiOS</strong> — a self-learning AI operating system inspired by the <em>I Ching</em>'s 64-hexagram framework.
+  Building <strong>TaijiOS</strong> — a hexagram-guided reliability and learning runtime for AI agents.
 </p>
 
 <p align="center">
@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="https://taijios-hud.netlify.app">
-    <img src="./assets/taijios-proof-card.svg" alt="TaijiOS execution proof card: 60 days, 14 modules, 346 heartbeats, 12/12 LLM gateway tests, 70,748 lines of code, 2 live demos" width="100%" />
+    <img src="./assets/taijios-proof-card.svg" alt="TaijiOS execution proof card: first 60-day snapshot, 14 modules, 346 heartbeats, 12/12 LLM gateway tests, 70,748 lines of code, 2 live demos" width="100%" />
   </a>
 </p>
 
@@ -20,17 +20,16 @@
 
 ## 👋 关于我 / About
 
-> **前生意合伙人，非 CS 出身**。2026 年大年初一（2026-02-17）在工作区写下第一个 AI agent 的 `SOUL.md`，从此和多个 AI（Claude / Gemini / GPT / DeepSeek 四路并行）一起搭建 TaijiOS。
+> Independent builder of TaijiOS. The current focus is not a broad "AI OS" claim, but a smaller engineering target: event flow, reliability, rollback, learning gates, and auditable agent evolution.
 >
-> A non-CS-background former-entrepreneur. Started writing the first AI agent's `SOUL.md` on **Chinese New Year's Day 2026-02-17**, building TaijiOS since then via multi-AI collaboration.
+> 中文：当前重点不是继续扩大概念，而是把 TaijiOS 收口成可运行、可验证、可回滚、可复盘的 AI Agent 可靠性系统。
 
 ---
 
 ## ⚡ 执行密度 / Build Velocity
 
 ```
-2026-02-17 (Chinese New Year)  →  2026-04-17 (today)
-                 60 days
+First 60-day build snapshot, starting 2026-02-17
                     ↓
            ✅ 14 modules live (1 🔄 in progress)
            ✅ Ising Heartbeat · 346 heartbeats · 18.8h physics experiment
@@ -40,9 +39,9 @@
            ✅ release repo · 48 commits · 70,748 LoC (8-day consolidation)
 ```
 
-**$0 budget · 0 team · 60 days · 70,748 LoC · 14 modules · 1 phase transition observed.**
+**$0 budget · 0 team · first 60-day snapshot · 70,748 LoC · 14 modules · 1 phase transition observed.**
 
-This is not a funding story yet. It is an execution-density signal.
+This is not a funding story yet. It is an execution-density snapshot. Check each repo for the latest state.
 
 ---
 
@@ -52,8 +51,9 @@ This profile is the portfolio entrance. Start here, then follow the repo that ma
 
 | Project | What | Language |
 |---|---|---|
-| **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — TaijiOS live HUD, five-engine architecture, and Chinese-facing landing | Python |
+| **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — hexagram-guided reliability/runtime system, live HUD, five-engine architecture | Python |
 | **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
+| **[taijios-bundle](https://github.com/yangfei222666-9/taijios-bundle)** | Installer / release snapshot / local trial bundle | Python |
 | **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Legacy prototype — archive candidate; current main development is `taiji` | Python |
 | **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Lite prototype / example pack — archive candidate; reusable ideas move into `taiji` | Python |
 | **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | 诸葛亮 · AI Prediction Advisor — 64-hexagram reasoning for football prediction (demo of TaijiOS decision engine) | Python |
@@ -64,12 +64,12 @@ This profile is the portfolio entrance. Start here, then follow the repo that ma
 
 **[zhuge-crystals](https://github.com/yangfei222666-9/zhuge-crystals)** is the public collaboration surface behind `zhuge-skill`: a sanitized, PR-reviewed decision-crystal pool.
 
-Current verified state:
+Current public state:
 
 - Public pool file: `crystals.jsonl`
 - Privacy rule: whitelist schema only; no user IDs, team names, timestamps, raw odds, API keys, or free-text notes
 - Contribution model: local users sanitize crystals, then submit a PR for maintainer review
-- Public entries today: `0` — the infrastructure exists; the next traction target is the first valid sanitized PR
+- Public entries at last profile update: `0` — the infrastructure exists; the next traction target is the first valid sanitized PR
 
 ---
 
@@ -84,12 +84,12 @@ Multi-LLM with auto-failover across 12 providers:
 
 ## 🔬 Technical Highlights
 
-- **Five-engine architecture** — each engine's responsibility is defined by its *I Ching* trigram, not decoratively but as enforced engineering constraints:
+- **Five-engine architecture** — each engine's responsibility is defined by an *I Ching* state role, not decoratively but as engineering constraints:
   `震 Zhen` = only recovery · `师 Shi` = only scheduling · `颐 Yi` = only experience learning · `乾 Qian` = situational awareness · `随 Sui` = persona switching.
 - **Ising Heartbeat** — maps 6 system dimensions to quantum spins (σ = ±1); 6 spins × 2 states = **64 hexagrams**. In a **346-heartbeat experiment**, the system exhibited a clean phase transition at tick 37 (ΔH = +0.30), then locked 99% of subsequent time in a new stable state. The self-adaptive field converged toward a *kun-virtue* (accommodating) coupling pattern — a physics-level emergence consistent with classical Taoist cosmology.
 - **LLM Gateway** — unified auth / rate-limit / multi-provider failover / audit, 12/12 extreme-scenario tests passed.
 - **Safe Click (4 gates)** — default-deny RPA click executor: window-binding + region-blacklist + whitelist + OCR-confidence.
-- **Self-Improving Loop** — actual code-level feedback-eval-rollback pipeline, not a methodology doc.
+- **Self-Improving Loop** — standalone reliability package released as `v0.1.1`; feedback, guarded strategy, and rollback are now separate from the main repo.
 
 ---
 
@@ -107,7 +107,7 @@ Not fortune-telling. **Life engineering.**
 
 ## 🤝 How to Collaborate
 
-**If you're an investor** — I don't have growth curves yet. What I can verify is execution density, technical originality, and cognitive clarity. If you believe "solo + AI collaboration" is a future engineering unit and are open to betting on signal over metrics at Pre-seed, let's talk.
+**If you're an investor** — I don't have growth curves yet. What I can verify is execution density, technical originality, and a working portfolio of small releases. If you believe "solo + AI collaboration" is a future engineering unit and are open to betting on signal over metrics at Pre-seed, let's talk.
 
 **If you're a potential co-founder** — clone [taiji](https://github.com/yangfei222666-9/taiji), run the live HUD path, and open a GitHub issue if something resonates. No polished CV needed.
 
@@ -130,5 +130,5 @@ Not fortune-telling. **Life engineering.**
 </p>
 
 <p align="center">
-  <sub>⚡ This README is part of TaijiOS's dogfooding — co-drafted with Claude Opus 4.7 from real commit logs and file timestamps. Every number here is independently verifiable.</sub>
+  <sub>⚡ This README is part of TaijiOS dogfooding. Numbers are project snapshots; verify the latest state from each repository before citing.</sub>
 </p>
