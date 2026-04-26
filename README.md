@@ -1,7 +1,15 @@
-<h1 align="center">TaijiOS · 诸葛亮</h1>
+<h1 align="center">Yang Fei — Building TaijiOS</h1>
 
 <p align="center">
-  Building <strong>TaijiOS</strong> — a hexagram-guided reliability and learning runtime for AI agents.
+  <strong>TaijiOS</strong> is a hexagram-guided reliability and learning runtime for AI agents.
+</p>
+
+<p align="center">
+  <strong>Not fortune-telling. Life engineering.</strong>
+</p>
+
+<p align="center">
+  It turns event flow, rollback, learning gates, and auditable agent evolution into reusable infrastructure for vertical decision engines. <strong>zhuge-skill</strong> is the first public case: football prediction built on a 64-hexagram reasoning structure.
 </p>
 
 <p align="center">
@@ -41,7 +49,9 @@ First 60-day build snapshot, starting 2026-02-17
 
 **$0 budget · 0 team · first 60-day snapshot · 70,748 LoC · 14 modules · 1 phase transition observed.**
 
-This is not a funding story yet. It is an execution-density snapshot. Check each repo for the latest state.
+This README is part of TaijiOS dogfooding: it was co-drafted with Claude Opus 4.7 from real commit logs, then personally verified by me. I own every claim and every word.
+
+Numbers are project snapshots, not marketing claims. Verify the latest state from each repository before citing.
 
 ---
 
@@ -61,12 +71,12 @@ This profile is the portfolio entrance. Start here, then follow the repo that ma
 
 | Project | What | Language |
 |---|---|---|
-| **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
 | **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — hexagram-guided reliability/runtime system, live HUD, five-engine architecture | Python |
+| **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
+| **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | First vertical case — 64-hexagram reasoning for football prediction | Python |
 | **[taijios-bundle](https://github.com/yangfei222666-9/taijios-bundle)** | Installer / release snapshot / local trial bundle | Python |
 | **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Archived legacy prototype; current main development is `taiji` | Python |
 | **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Archived lite prototype / example pack; reusable ideas move into `taiji` | Python |
-| **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | 诸葛亮 · AI Prediction Advisor — 64-hexagram reasoning for football prediction (demo of TaijiOS decision engine) | Python |
 
 ---
 
@@ -87,19 +97,18 @@ Current public state:
 
 `Python 3.12` · `FastAPI` · `SQLite` · `pyautogui` · `Whisper` · `edge-tts` · `Telegram Bot API` · `Lark / Feishu SDK`
 
-Multi-LLM with auto-failover across 12 providers:
+Runs on a multi-LLM gateway with failover across 12 providers:
 `Claude` · `GPT` · `Gemini` · `DeepSeek` · `Kimi` · `Qwen` · `ZhipuAI` · `Doubao` · `Yi` · `Baichuan` · `MiniMax`
 
 ---
 
 ## 🔬 Technical Highlights
 
-- **Five-engine architecture** — each engine's responsibility is defined by an *I Ching* state role, not decoratively but as engineering constraints:
+- **Five-engine architecture** — each engine has a constrained engineering role: recovery, scheduling, experience learning, situational awareness, or persona switching.
   `震 Zhen` = only recovery · `师 Shi` = only scheduling · `颐 Yi` = only experience learning · `乾 Qian` = situational awareness · `随 Sui` = persona switching.
-- **Ising Heartbeat** — maps 6 system dimensions to quantum spins (σ = ±1); 6 spins × 2 states = **64 hexagrams**. In a **346-heartbeat experiment**, the system exhibited a clean phase transition at tick 37 (ΔH = +0.30), then locked 99% of subsequent time in a new stable state. The self-adaptive field converged toward a *kun-virtue* (accommodating) coupling pattern — a physics-level emergence consistent with classical Taoist cosmology.
-- **LLM Gateway** — unified auth / rate-limit / multi-provider failover / audit, 12/12 extreme-scenario tests passed.
+- **Ising Heartbeat** — maps six system dimensions into 64 hexagram states; the 346-heartbeat experiment observed a phase transition and stable-state lock-in.
 - **Safe Click (4 gates)** — default-deny RPA click executor: window-binding + region-blacklist + whitelist + OCR-confidence.
-- **Self-Improving Loop** — standalone reliability package released as `v0.1.1`; feedback, guarded strategy, and rollback are now separate from the main repo.
+- **Self-Improving Loop** — standalone reliability package: feedback, guarded strategy, and rollback separated from the main repo.
 
 ---
 
@@ -111,13 +120,19 @@ Multi-LLM with auto-failover across 12 providers:
 >
 > — from the **ICI protocol**
 
-Not fortune-telling. **Life engineering.**
+## TaijiOS Wedge
+
+TaijiOS is infrastructure for building vertical 64-hexagram decision engines on top of the ICI protocol. The core idea: map messy real-world signals into auditable six-line state transitions, then use reliability gates, rollback, and learning loops to make the decision process inspectable instead of mystical.
+
+`zhuge-skill` is the first public vertical case: football prediction. The next cases can be any domain where decisions are high-context, evidence-heavy, and hard to audit — finance, operations, healthcare, law, or founder decision support.
 
 ---
 
 ## 🤝 How to Collaborate
 
-**If you're an investor** — I don't have growth curves yet. What I can verify is execution density, technical originality, and a working portfolio of small releases. If you believe "solo + AI collaboration" is a future engineering unit and are open to betting on signal over metrics at Pre-seed, let's talk.
+**If you're an investor** — what is verifiable at this stage: 14 production modules in 60 days as a solo builder, 5 shipped surfaces, a released reliability package, and a novel architecture around five engines + Ising heartbeat.
+
+This is a Pre-seed signal, not a growth-metrics story yet: the bet is builder velocity, original architecture, and whether "solo + AI collaboration" becomes a new engineering unit. Open an issue if that thesis resonates.
 
 **If you're a potential co-founder** — clone [taiji](https://github.com/yangfei222666-9/taiji), run the live HUD path, and open a GitHub issue if something resonates. No polished CV needed.
 
@@ -137,8 +152,4 @@ Not fortune-telling. **Life engineering.**
 <p align="center">
   <strong>太极生两仪，两仪生四象，四象生万物。</strong><br>
   <em>From Taiji comes Yin and Yang; from Yin and Yang come all things.</em>
-</p>
-
-<p align="center">
-  <sub>⚡ This README is part of TaijiOS dogfooding. Numbers are project snapshots; verify the latest state from each repository before citing.</sub>
 </p>
