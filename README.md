@@ -1,4 +1,4 @@
-<h1 align="center">Yang Fei — Building TaijiOS</h1>
+<h1 align="center">TaijiOS Lab — Building Reliable Agent Infrastructure</h1>
 
 <p align="center">
   <strong>TaijiOS</strong> is a hexagram-guided reliability and learning runtime for AI agents.
@@ -13,7 +13,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/yangfei222666-9?tab=followers"><img src="https://img.shields.io/github/followers/yangfei222666-9?label=Follow&style=social" alt="GitHub followers"/></a>
   <a href="https://taijios-hud.netlify.app"><img src="https://img.shields.io/badge/HUD-Live%20Demo-00d1b2" alt="HUD demo"/></a>
   <a href="https://taijios-cyberpet.netlify.app"><img src="https://img.shields.io/badge/CyberPet-Live%20Demo-ff3860" alt="CyberPet demo"/></a>
 </p>
@@ -57,7 +56,7 @@ Numbers are project snapshots, not marketing claims. Verify the latest state fro
 
 ## 🚀 Current Release / 当前入口
 
-Start with **[self-improving-loop v0.1.1](https://github.com/yangfei222666-9/self-improving-loop/releases/tag/v0.1.1)**.
+Start with **[self-improving-loop v0.1.1](../self-improving-loop/releases/tag/v0.1.1)**.
 
 It is the smallest reusable slice of TaijiOS: a hexagram-guided reliability layer for AI agents that records execution traces, maps runtime signals into six engineering lines, applies guarded policy patches, and rolls back on regression.
 
@@ -71,18 +70,18 @@ This profile is the portfolio entrance. Start here, then follow the repo that ma
 
 | Project | What | Language |
 |---|---|---|
-| **[taiji](https://github.com/yangfei222666-9/taiji)** | Current main repo — hexagram-guided reliability/runtime system, live HUD, five-engine architecture | Python |
-| **[self-improving-loop](https://github.com/yangfei222666-9/self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
-| **[zhuge-skill](https://github.com/yangfei222666-9/zhuge-skill)** | First vertical case — 64-hexagram reasoning for football prediction | Python |
-| **[taijios-bundle](https://github.com/yangfei222666-9/taijios-bundle)** | Installer / release snapshot / local trial bundle | Python |
-| **[TaijiOS](https://github.com/yangfei222666-9/TaijiOS)** | Archived legacy prototype; current main development is `taiji` | Python |
-| **[TaijiOS-Lite](https://github.com/yangfei222666-9/TaijiOS-Lite)** | Archived lite prototype / example pack; reusable ideas move into `taiji` | Python |
+| **[taiji](../taiji)** | Current main repo — hexagram-guided reliability/runtime system, live HUD, five-engine architecture | Python |
+| **[self-improving-loop](../self-improving-loop)** | Standalone reliability layer — v0.1.1 released; trace failures, apply guarded changes, and rollback on regression | Python |
+| **[zhuge-skill](../zhuge-skill)** | First vertical case — 64-hexagram reasoning for football prediction | Python |
+| **[taijios-bundle](../taijios-bundle)** | Installer / release snapshot / local trial bundle | Python |
+| **[TaijiOS](../TaijiOS)** | Archived legacy prototype; current main development is `taiji` | Python |
+| **[TaijiOS-Lite](../TaijiOS-Lite)** | Archived lite prototype / example pack; reusable ideas move into `taiji` | Python |
 
 ---
 
 ## 🧊 Shared Crystal Pool
 
-**[zhuge-crystals](https://github.com/yangfei222666-9/zhuge-crystals)** is the public collaboration surface behind `zhuge-skill`: a sanitized, PR-reviewed decision-crystal pool.
+**[zhuge-crystals](../zhuge-crystals)** is the public collaboration surface behind `zhuge-skill`: a sanitized, PR-reviewed decision-crystal pool.
 
 Current public state:
 
@@ -134,7 +133,7 @@ TaijiOS is infrastructure for building vertical 64-hexagram decision engines on 
 
 This is a Pre-seed signal, not a growth-metrics story yet: the bet is builder velocity, original architecture, and whether "solo + AI collaboration" becomes a new engineering unit. Open an issue if that thesis resonates.
 
-**If you're a potential co-founder** — clone [taiji](https://github.com/yangfei222666-9/taiji), run the live HUD path, and open a GitHub issue if something resonates. No polished CV needed.
+**If you're a potential co-founder** — clone [taiji](../taiji), run the live HUD path, and open a GitHub issue if something resonates. No polished CV needed.
 
 **If you're a potential user** — describe your business pain point. We'll evaluate whether a custom skill on top of TaijiOS could be your industry's first landing case.
 
@@ -144,7 +143,7 @@ This is a Pre-seed signal, not a growth-metrics story yet: the bet is builder ve
 
 - **GitHub issues preferred** — open an issue on the repo closest to your topic
 - Telegram bot: [@TaijiOS_bot](https://t.me/TaijiOS_bot)
-- ClawHub: [Zhuge · AI Prediction Advisor](https://clawhub.ai/@yangfei222666-9/zhuge-skill)
+- ClawHub: Zhuge · AI Prediction Advisor
 - Xiaping: [诸葛亮 · AI 推演军师](https://xiaping.coze.site/)
 
 ---

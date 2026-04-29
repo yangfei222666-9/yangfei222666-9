@@ -16,7 +16,7 @@ from pathlib import Path
 
 
 REQUIRED_README_SNIPPETS = (
-    "Building TaijiOS",
+    "Building Reliable Agent Infrastructure",
     "self-improving-loop v0.1.1",
     "zhuge-crystals",
     "No polished CV needed",
@@ -24,10 +24,15 @@ REQUIRED_README_SNIPPETS = (
 )
 
 REQUIRED_LINKS = (
-    "https://github.com/yangfei222666-9/taiji",
-    "https://github.com/yangfei222666-9/self-improving-loop",
-    "https://github.com/yangfei222666-9/zhuge-skill",
-    "https://github.com/yangfei222666-9/zhuge-crystals",
+    "../taiji",
+    "../self-improving-loop",
+    "../zhuge-skill",
+    "../zhuge-crystals",
+)
+
+FORBIDDEN_README_SNIPPETS = (
+    f"{'Yang'} {'Fei'}",
+    "yang" + "fei" + "222666-9",
 )
 
 LOCAL_ASSET_RE = re.compile(r'<img[^>]+src="(?P<src>\./assets/taijios-proof-card\.svg)"', re.IGNORECASE)
@@ -49,6 +54,10 @@ def validate_readme(readme_path: Path) -> list[str]:
     for link in REQUIRED_LINKS:
         if link not in text:
             errors.append(f"README.md missing required link: {link}")
+
+    for snippet in FORBIDDEN_README_SNIPPETS:
+        if snippet in text:
+            errors.append(f"README.md contains forbidden privacy snippet: {snippet}")
 
     if not LOCAL_ASSET_RE.search(text):
         errors.append("README.md must reference ./assets/taijios-proof-card.svg")
