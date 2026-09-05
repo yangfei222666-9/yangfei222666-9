@@ -1,104 +1,110 @@
 #!/usr/bin/env python3
-"""Validate the GitHub profile README and local visual asset.
-
-The profile repo is mostly documentation, so this check intentionally stays
-local and deterministic. It verifies that the public entrypoints and proof-card
-asset are present without depending on third-party network availability.
-"""
+"""Validate the public GitHub profile README contract."""
 
 from __future__ import annotations
 
 import argparse
 import re
 import sys
-import xml.etree.ElementTree as ET
 from pathlib import Path
+from urllib.parse import urlsplit
 
 
 REQUIRED_README_SNIPPETS = (
-    "Building Reliable Agent Infrastructure",
-    "self-improving-loop v0.1.1",
-    "zhuge-crystals",
-    "No polished CV needed",
-    "GitHub issues preferred",
+    "Agent Reliability · Evals · Developer Tools",
+    "does the closeout include an explicit evidence pointer",
+    "memory-auditor",
+    "Agent Reliability proof",
+    "External evidence",
+    "Reviewed and merged contribution",
+    "Issue-to-fix trace",
+    "Feedback and collaboration",
+    "AI tools assist research, implementation, testing, translation, and review",
 )
 
-REQUIRED_LINKS = (
-    "../taiji",
-    "../self-improving-loop",
-    "../zhuge-skill",
-    "../zhuge-crystals",
+REQUIRED_URLS = (
+    "https://github.com/yangfei222666-9/memory-auditor",
+    "https://github.com/yangfei222666-9/memory-auditor/releases/tag/repro-v0-v5",
+    "https://github.com/yangfei222666-9/taiji/blob/main/docs/portfolio/agent-reliability-proof.md",
+    "https://github.com/creativedswork/dsh-expmem/pull/2",
+    "https://github.com/tt-a1i/archify/issues/76",
+    "https://github.com/tt-a1i/archify/pull/80",
+    "https://github.com/deepseek-ai/deepseek-harness/discussions/4911",
+    "https://github.com/0xsline/awesome-deepseek-harness/pull/406",
 )
 
 FORBIDDEN_README_SNIPPETS = (
-    f"{'Yang'} {'Fei'}",
-    "yang" + "fei" + "222666-9",
+    "../",
+    "taijios-product-spine-roadmap",
+    "No polished CV needed",
+    "14 production modules",
+    "70,748 LoC",
+    "12 providers",
+    "industry-standard",
+    "merged upstream",
+    "maintainer review",
 )
 
-LOCAL_ASSET_RE = re.compile(r'<img[^>]+src="(?P<src>\./assets/taijios-proof-card\.svg)"', re.IGNORECASE)
+EMAIL_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+PHONE_RE = re.compile(r"(?<!\w)(?:\+?\d[\d ()-]{7,}\d)(?!\w)")
+MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+HTML_HREF_RE = re.compile(r"<a\b[^>]*\bhref\s*=", re.IGNORECASE)
 
 
 def validate_readme(readme_path: Path) -> list[str]:
-    errors: list[str] = []
     if not readme_path.exists():
         return [f"{readme_path}: missing"]
 
     text = readme_path.read_text(encoding="utf-8")
-    if len(text.strip()) < 1000:
+    errors: list[str] = []
+
+    if len(text.strip()) < 1500:
         errors.append("README.md is unexpectedly short")
 
     for snippet in REQUIRED_README_SNIPPETS:
         if snippet not in text:
             errors.append(f"README.md missing required snippet: {snippet}")
 
-    for link in REQUIRED_LINKS:
-        if link not in text:
-            errors.append(f"README.md missing required link: {link}")
-
     for snippet in FORBIDDEN_README_SNIPPETS:
         if snippet in text:
-            errors.append(f"README.md contains forbidden privacy snippet: {snippet}")
+            errors.append(f"README.md contains forbidden snippet: {snippet}")
 
-    if not LOCAL_ASSET_RE.search(text):
-        errors.append("README.md must reference ./assets/taijios-proof-card.svg")
+    if EMAIL_RE.search(text):
+        errors.append("README.md contains a literal email address")
+    if PHONE_RE.search(text):
+        errors.append("README.md contains a phone-like value")
 
-    return errors
+    targets = set(MARKDOWN_LINK_RE.findall(text))
+    for url in REQUIRED_URLS:
+        if url not in targets:
+            errors.append(f"README.md missing required Markdown link target: {url}")
 
+    if HTML_HREF_RE.search(text):
+        errors.append("README.md contains a raw HTML link")
 
-def validate_svg(svg_path: Path) -> list[str]:
-    errors: list[str] = []
-    if not svg_path.exists():
-        return [f"{svg_path}: missing"]
-
-    try:
-        root = ET.parse(svg_path).getroot()
-    except ET.ParseError as exc:
-        return [f"{svg_path}: invalid SVG XML: {exc}"]
-
-    if not root.tag.endswith("svg"):
-        errors.append(f"{svg_path}: root element is not svg")
-    if not root.attrib.get("width") or not root.attrib.get("height"):
-        errors.append(f"{svg_path}: width and height are required")
-
-    title_found = any(child.tag.endswith("title") for child in root.iter())
-    desc_found = any(child.tag.endswith("desc") for child in root.iter())
-    if not title_found:
-        errors.append(f"{svg_path}: missing title element")
-    if not desc_found:
-        errors.append(f"{svg_path}: missing desc element")
+    for target in targets:
+        parsed = urlsplit(target)
+        if parsed.scheme not in {"http", "https"}:
+            errors.append(f"README.md link must use an absolute HTTP(S) URL: {target}")
 
     return errors
+
+
+def validate_legacy_asset_absent(path: Path) -> list[str]:
+    if path.exists():
+        return [f"legacy proof-card asset must be removed or revalidated: {path}"]
+    return []
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Validate profile README and local assets.")
+    parser = argparse.ArgumentParser(description="Validate the public profile README.")
     parser.add_argument("--readme", default="README.md")
-    parser.add_argument("--svg", default="assets/taijios-proof-card.svg")
+    parser.add_argument("--legacy-proof-card", default="assets/taijios-proof-card.svg")
     args = parser.parse_args()
 
     errors = [
         *validate_readme(Path(args.readme)),
-        *validate_svg(Path(args.svg)),
+        *validate_legacy_asset_absent(Path(args.legacy_proof_card)),
     ]
     if errors:
         print("profile validation failed:", file=sys.stderr)

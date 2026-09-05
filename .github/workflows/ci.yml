@@ -19,5 +19,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate README and assets
+      - name: Validate README
         run: python scripts/validate_profile.py
+
+      - name: Run validator regression tests
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
